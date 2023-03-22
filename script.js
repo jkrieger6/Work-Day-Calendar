@@ -2,8 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 // sets the current date and time at the top of the page.
-var currentTime = dayjs();
-$('#currentDay').text(currentTime);
+var todayDate = dayjs().format('dddd, MMM DD YYYY');
+$("#currentDay").html(todayDate);
 $(function () {
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
