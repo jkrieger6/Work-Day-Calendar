@@ -23,7 +23,7 @@ $(function () {
     // attribute of each time-block be used to conditionally add or remove the
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
-    let currentHour = dayjs();
+    var currentHour = dayjs();
     var present = dayjs("2023-03-23 10:00:00");
     var future = dayjs("2023-03-23 10:00:00");
     var past = dayjs("2023-03-22 10:00:00");
@@ -31,7 +31,7 @@ $(function () {
     if (currentHour.isBefore(present, 'hour')) {
         document.getElementById("future");
         console.log(currentHour);
-    } else if (currentHour.isSameOrAfter(present, 'hour') && currentHour.isSameOrBefore(present.endOf('hour'))); {
+    } else if (currentHour.isSameOrAfter(present, 'hour') && currentHour.isSameOrBefore(present.endOf('hour'))) {
         document.getElementById('present');
         console.log(currentHour);
     } else (currentHour.isAfter(present, "hour")); {
