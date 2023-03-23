@@ -26,10 +26,6 @@ $(function () {
         $(".time-block").each(function() {
             var currHour = parseInt($(this).attr("id"));
     var currentHour = dayjs();
-    var present = dayjs("2023-03-23 10:00:00");
-    var future = dayjs("2023-03-23 10:00:00");
-    var past = dayjs("2023-03-22 10:00:00");
-
    if (currentHour > hour) {
         $(this).addClass("future");
     } else if (currentHour === hour) {
