@@ -1,15 +1,15 @@
+//Wrap what interacts with the DOM
 $(document).ready(function () {
   // sets the current date and time at the top of the page.
   var saveBtn = $(".saveBtn");
   var todayDate = dayjs().format("dddd, MMM DD YYYY");
   $("#currentDay").html(todayDate);
   $(".saveBtn").on("click", function () {
-    var text = $(this).siblings(".fa-save").val();
+    var text = $(this).siblings(".plan").val();
     var time = $(this).parent().attr("id");
     // Save text in local storage
     localStorage.setItem(time, text);
   });
-  $("#9.time-block").value(localstorage.getItem("9"));
 });
 
 
@@ -42,7 +42,10 @@ function timeBlockColor() {
     } else {
       $(this).addClass("future");
     }
+
+    $("#"+hour +" textarea").val(localStorage.getItem(hour));
+
   });
 }
 timeBlockColor();
-usePlanner();
+
