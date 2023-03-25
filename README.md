@@ -1,6 +1,8 @@
 # Work-Day-Calendar
 A calendar for the individual work day that displays the current day and time and has the ability to add text each individual hour of the day. The data will stay on the page during a refresh and will also be accessible in the local storage using DeveloperTools.
 
+Application live at: https://jkrieger6.github.io/Work-Day-Calendar/
+
 ## Installation
 Made using the latest versions of GitHub, Bootstrap, Dayjs, Visual Studio Code, and jQuery.
 
